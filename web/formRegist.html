@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi | Matchaku</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --matcha-green: #6bbf59;
+            --dark-matcha: #5aa64b;
+            --light-matcha: #e8f5e9;
+            --japan-red: #c82525;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('https://www.matakanasuperfoods.com/cdn/shop/files/Matcha_About.png?v=1727149914') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar-brand {
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: var(--matcha-green);
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.92);
+            padding: 2.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            margin: 2rem auto;
+        }
+
+        .form-title {
+            font-weight: 600;
+            color: var(--dark-matcha);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .form-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--matcha-green);
+            margin: 0.5rem auto 0;
+        }
+
+        .input-group-custom {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group-custom input {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            border: 1px solid #ced4da;
+            border-radius: 0.5rem;
+            background: rgba(255, 255, 255, 0.95);
+            font-size: 1rem;
+        }
+
+        .input-group-custom input:focus {
+            outline: none;
+            border-color: var(--matcha-green);
+            box-shadow: 0 0 0 0.25rem rgba(107, 191, 89, 0.25);
+        }
+
+        .input-group-custom label {
+            position: absolute;
+            top: 1rem;
+            left: 3rem;
+            color: #6c757d;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .input-group-custom input:focus + label,
+        .input-group-custom input:not(:placeholder-shown) + label {
+            top: -0.5rem;
+            left: 2.8rem;
+            font-size: 0.8rem;
+            background: white;
+            padding: 0 0.3rem;
+            color: var(--dark-matcha);
+        }
+
+        .input-icon {
+            position: absolute;
+            top: 50%;
+            left: 1rem;
+            transform: translateY(-50%);
+            color: var(--dark-matcha);
+            font-size: 1.2rem;
+            z-index: 2;
+        }
+
+        .password-toggle {
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            transform: translateY(-50%);
+            color: #6c757d;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .btn-matcha {
+            background-color: var(--matcha-green);
+            border: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            width: 100%;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .btn-matcha:hover {
+            background-color: var(--dark-matcha);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-link {
+            color: var(--dark-matcha);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .login-link:hover {
+            color: var(--matcha-green);
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.85);
+            color: white;
+            padding: 1.5rem 0;
+            margin-top: auto;
+        }
+
+        .footer-logo {
+            font-weight: 600;
+            color: var(--matcha-green);
+        }
+
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 1.5rem;
+                margin: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.jsp">
+                <i class="bi bi-cup-hot-fill me-2"></i>Matchaku
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.jsp">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produk.jsp">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.jsp">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="formRegist.html">Daftar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.jsp">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Form Registrasi -->
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="form-container">
+                    <h2 class="form-title">Buat Akun Matchaku</h2>
+                    <form action="register.jsp" method="post">
+                        <!-- Nama -->
+                        <div class="input-group-custom">
+                            <i class="bi bi-person input-icon"></i>
+                            <input type="text" id="nama" name="nama" placeholder=" " required>
+                            <label for="nama">Nama Lengkap</label>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="input-group-custom">
+                            <i class="bi bi-envelope input-icon"></i>
+                            <input type="email" id="email" name="email" placeholder=" " required>
+                            <label for="email">Alamat Email</label>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="input-group-custom">
+                            <i class="bi bi-lock input-icon"></i>
+                            <input type="password" id="password" name="password" placeholder=" " minlength="6" required>
+                            <label for="password">Password</label>
+                            <i class="bi bi-eye-slash password-toggle" id="togglePassword"></i>
+                        </div>
+
+                        <!-- Tombol Daftar -->
+                        <button type="submit" class="btn btn-matcha mb-3">
+                            <i class="bi bi-person-plus me-2"></i>Daftar Sekarang
+                        </button>
+
+                        <!-- Link Login -->
+                        <div class="text-center mt-3">
+                            Sudah punya akun? <a href="login.jsp" class="login-link">Masuk disini</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <div class="footer-logo mb-3">
+                <i class="bi bi-cup-hot-fill me-2"></i>Matchaku
+            </div>
+            <p class="mb-3">Premium Matcha Products from Japan</p>
+            <div class="social-icons mb-3">
+                <a href="#" class="text-white mx-2"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white mx-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white mx-2"><i class="bi bi-twitter"></i></a>
+            </div>
+            <p class="small">&copy; 2023 Matchaku. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script untuk toggle password visibility -->
+    <script>
+        const toggle = document.getElementById('togglePassword');
+        const password = document.getElementById('password');
+
+        toggle.addEventListener('click', function () {
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            this.classList.toggle('bi-eye');
+            this.classList.toggle('bi-eye-slash');
+        });
+
+        // Auto focus pertama input saat halaman dimuat
+        document.getElementById('nama').focus();
+    </script>
+</body>
+</html>

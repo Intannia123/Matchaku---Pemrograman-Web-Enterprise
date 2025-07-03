@@ -36,8 +36,8 @@
         return;
     }
 
-    String clientId = "180021249265-3m1iuib9orvj4hlhoaevd6eho2ut3mvp.apps.googleusercontent.com";
-    String clientSecret = "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";
+    String clientId = "";
+    String clientSecret = "";
     String redirectUri = "http://localhost:8080/WebPertemuan6/googleLogin.jsp";
 
     try {

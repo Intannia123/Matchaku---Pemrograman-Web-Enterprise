@@ -2,7 +2,7 @@
 <%@ page import="java.net.URLEncoder" %>
 <%
     // Google OAuth2 settings
-    String clientId = "180021249265-3m1iuib9orvj4hlhoaevd6eho2ut3mvp.apps.googleusercontent.com";
+    String clientId = "";
     String redirectUri = "http://localhost:8080/WebPertemuan6/googleLogin.jsp";
 
     String googleAuthUrl = "https://accounts.google.com/o/oauth2/v2/auth"
@@ -19,7 +19,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-signin-client_id" content="180021249265-3m1iuib9orvj4hlhoaevd6eho2ut3mvp.apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content="">
     <title>Login Pengguna | Matchaku</title>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
 
